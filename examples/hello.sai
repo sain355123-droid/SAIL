@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 module Math
 start
-let x = (2 + 3) * 4
-show x
-=======
-module Hello
-
-start
-
-show "Hello SAIL"
-
->>>>>>> 0340484d47a9bf2838035c226babccd5022127aa
+let a = 10
+let b = 20
+show a + b
 end

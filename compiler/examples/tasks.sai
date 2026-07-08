@@ -1,0 +1,33 @@
+// tasks.sai — SAIL v0.5 feature tour: tasks (functions), return, recursion.
+module Tasks
+start
+  task square(n) start
+    return n * n
+  end
+
+  task greet(name) start
+    show "Hello, " + name + "!"
+  end
+
+  task factorial(n) start
+    if n <= 1 start
+      return 1
+    end
+    return n * factorial(n - 1)
+  end
+
+  show square(6)
+  greet("SAIL")
+  show factorial(5)
+
+  // Tasks can take multiple parameters and use loops internally.
+  task sumRange(from, to) start
+    let total = 0
+    for i in from..to start
+      let total = total + i
+    end
+    return total
+  end
+
+  show sumRange(1, 11)
+end

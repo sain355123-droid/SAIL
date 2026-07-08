@@ -1,0 +1,7 @@
+// input_demo.sai — SAIL v0.5 feature tour: reading from stdin.
+// Run with:  echo "Alice" | node compiler/index.js input_demo.sai
+module InputDemo
+start
+  let name = input("What's your name? ")
+  show "Hi " + name + "!"
+end

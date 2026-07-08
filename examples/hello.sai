@@ -1,0 +1,6 @@
+module Math
+start
+let a = 10
+let b = 20
+show a + b
+end

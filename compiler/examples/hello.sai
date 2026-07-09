@@ -1,0 +1,5 @@
+module Math
+start
+let x = (2 + 3) * 4
+show x
+end

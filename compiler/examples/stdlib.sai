@@ -1,0 +1,22 @@
+// stdlib.sai — SAIL v0.5 feature tour: standard library functions.
+module StdLib
+start
+  let numbers = [4, 8, 15, 16, 23, 42]
+  show length(numbers)
+  show type(numbers)
+  show type(42)
+  show type("hi")
+  show type(true)
+
+  let asText = text(numbers)
+  show asText
+  show type(asText)
+
+  let fromText = number("123")
+  show fromText + 1
+
+  let roll = random(1, 6)
+  show type(roll)
+
+  show time() > 0
+end

@@ -1,0 +1,39 @@
+// loops_and_arrays.sai — SAIL v0.5 feature tour: for loops, break, continue,
+// arrays, indexing, and logical operators.
+module LoopsAndArrays
+start
+  // A numeric range: prints 0, 1, 2, 3, 4 (upper bound is exclusive)
+  for i in 0..5 start
+    if i == 3 start
+      continue
+    end
+    show i
+  end
+
+  let fruits = ["apple", "banana", "cherry", "date"]
+  show length(fruits)
+
+  // Iterate the elements of an array directly
+  for fruit in fruits start
+    if fruit == "cherry" start
+      break
+    end
+    show fruit
+  end
+
+  let scores = [10, 20, 30]
+  let scores[1] = 99      // rewrite an existing element
+  let scores[3] = 40      // append (index == length)
+  show scores
+
+  let a = true
+  let b = false
+  show a and b
+  show a or b
+  show not a
+
+  let x = 5
+  if x > 0 and x < 10 start
+    show "x is a single digit"
+  end
+end

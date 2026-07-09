@@ -1,0 +1,18 @@
+// mathutils.sai — a small module of exported helpers
+module MathUtils
+start
+  export const PI = 3.14159
+
+  export task square(x) start
+    return x * x
+  end
+
+  export task circleArea(radius) start
+    return PI * square(radius)
+  end
+
+  // Not exported — private to this module
+  task helper() start
+    return "internal only"
+  end
+end

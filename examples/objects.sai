@@ -1,0 +1,34 @@
+// objects.sai — demonstrates object literals, dot/bracket access, and assignment
+module Objects
+start
+  let user = { name: "Sainath", age: 21, active: true }
+  show user
+  show user.name
+  show user["age"]
+
+  let user.age = 22
+  show user.age
+
+  let user.city = "Hyderabad"   // objects can gain new keys freely
+  show user
+
+  show keys(user)
+  show values(user)
+  show contains(user, "name")
+
+  // Nested objects and arrays
+  let profile = {
+    name: "Sai",
+    scores: [90, 85, 88],
+    address: { city: "Hyd", pin: 500001 }
+  }
+  show profile.scores[1]
+  show profile.address.city
+
+  let profile.address.city = "Bengaluru"
+  show profile.address.city
+
+  foreach key in user start
+    show key
+  end
+end

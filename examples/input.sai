@@ -1,0 +1,10 @@
+// input.sai — demonstrates reading a line from the user with input()
+module InputDemo
+start
+  let name = input("What is your name? ")
+  show "Hello, " + name + "!"
+
+  let ageText = input("How old are you? ")
+  let age = number(ageText)
+  show "In 10 years you'll be " + text(age + 10)
+end

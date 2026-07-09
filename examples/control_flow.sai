@@ -1,0 +1,27 @@
+module ControlFlow
+start
+let x = 7
+
+if x > 5 start
+  show "x is big"
+end
+else start
+  show "x is small"
+end
+
+let count = 0
+while count < 3 start
+  show count
+  let count = count + 1
+end
+
+let ready = true
+if ready start
+  show "ready is true"
+end
+
+let a = 4
+let b = 4
+show a == b
+show a != b
+end

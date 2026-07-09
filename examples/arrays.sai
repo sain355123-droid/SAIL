@@ -1,0 +1,25 @@
+// arrays.sai — demonstrates array literals, indexing, and assignment
+module Arrays
+start
+  let numbers = [10, 20, 30]
+  show numbers
+  show numbers[0]
+  show numbers[2]
+
+  let numbers[1] = 99
+  show numbers
+
+  // Appending by writing one past the end
+  let numbers[3] = 40
+  show numbers
+
+  show length(numbers)
+
+  // Nested arrays
+  let grid = [[1, 2], [3, 4]]
+  show grid[1][0]
+
+  // Arrays of mixed types, shown with text quoting for strings
+  let mixed = [1, "two", true]
+  show mixed
+end

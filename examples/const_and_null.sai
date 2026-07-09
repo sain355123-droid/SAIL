@@ -1,0 +1,25 @@
+// const_and_null.sai — demonstrates const, nothing (null), and else-if chains
+module ConstAndNull
+start
+  const PI = 3.14159
+  show PI
+
+  let empty = nothing
+  show empty
+  show type(empty)
+  show empty == nothing
+
+  let score = 72
+  if score >= 90 start
+    show "A"
+  end
+  else if score >= 80 start
+    show "B"
+  end
+  else if score >= 70 start
+    show "C"
+  end
+  else start
+    show "F"
+  end
+end

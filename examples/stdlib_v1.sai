@@ -1,0 +1,38 @@
+// stdlib_v1.sai — demonstrates the v1.0 standard library additions
+module StdlibV1
+start
+  // Collections
+  let nums = [3, 1, 4, 1, 5, 9, 2, 6]
+  show push(nums, 100)
+  show nums
+  show pop(nums)
+  show nums
+  show insert(nums, 1, 999)
+  show remove(nums, 1)
+  show nums
+  sort(nums)
+  show nums
+  reverse(nums)
+  show nums
+  show join(["a", "b", "c"], "-")
+  show contains(nums, 9)
+
+  let person = { name: "Sai", role: "Founder" }
+  show keys(person)
+  show values(person)
+  show contains(person, "role")
+
+  // Strings
+  show split("a,b,c", ",")
+  show trim("   padded text   ")
+  show upper("shout")
+  show lower("QUIET")
+  show replace("banana", "a", "o")
+  show substring("hello world", 0, 5)
+  show substring("hello world", 6)
+
+  // IO / system
+  show clock() >= 0
+  show time() > 0
+  print("printed via print()")
+end

@@ -1,0 +1,35 @@
+// loops.sai — demonstrates for loops, break, and continue
+module Loops
+start
+  // Range form: counts from 0 up to (not including) 5
+  for i in 0 to 5 start
+    show i
+  end
+
+  // Range form with a custom step
+  for i in 10 to 0 step -2 start
+    show i
+  end
+
+  // Iterate form: walk over an array directly
+  let fruits = ["apple", "banana", "cherry"]
+  for fruit in fruits start
+    show fruit
+  end
+
+  // break stops the loop early
+  for i in 0 to 100 start
+    if i == 3 start
+      break
+    end
+    show i
+  end
+
+  // continue skips to the next iteration
+  for i in 0 to 5 start
+    if i == 2 start
+      continue
+    end
+    show i
+  end
+end

@@ -1,0 +1,15 @@
+{ name: "Sainath", age: 21, active: true }
+Sainath
+21
+22
+{ name: "Sainath", age: 22, active: true, city: "Hyderabad" }
+["name", "age", "active", "city"]
+["Sainath", 22, true, "Hyderabad"]
+true
+85
+Hyd
+Bengaluru
+name
+age
+active
+city

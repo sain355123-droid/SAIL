@@ -1,0 +1,31 @@
+// logic.sai — demonstrates and / or / not, plus // comments
+module Logic
+start
+  let a = true
+  let b = false
+
+  show a and b     // false
+  show a or b       // true
+  show not a         // false
+  show not b         // true
+
+  let x = 5
+  if x > 0 and x < 10 start
+    show "x is a single digit positive number"
+  end
+
+  // Short-circuiting: right side shouldn't run if left already decides it
+  task sideEffect() start
+    show "side effect ran"
+    return true
+  end
+
+  if false and sideEffect() start
+    show "unreachable"
+  end
+  show "after short-circuit and"
+
+  if true or sideEffect() start
+    show "reached via or"
+  end
+end

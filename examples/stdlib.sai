@@ -1,0 +1,33 @@
+// stdlib.sai — demonstrates the SAIL standard library
+module Stdlib
+start
+  show length("hello")
+  show length([1, 2, 3, 4])
+
+  show type(5)
+  show type("hi")
+  show type(true)
+  show type([1, 2])
+
+  task greet() start
+    show "hi"
+  end
+  show type(greet)
+
+  show number("42")
+  show number("3.14")
+  show number(true)
+
+  show text(123)
+  show text([1, 2, 3])
+  show text(true)
+
+  let r = random()
+  show type(r)
+
+  let d = random(1, 6)
+  show d >= 1 and d <= 6
+
+  let t = time()
+  show type(t)
+end

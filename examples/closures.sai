@@ -1,0 +1,48 @@
+// closures.sai — demonstrates default/optional parameters, anonymous tasks, and closures
+module Closures
+start
+  // Default parameter values
+  task greet(name, greeting = "Hello") start
+    show greeting + ", " + name + "!"
+  end
+  greet("Sainath")
+  greet("Sainath", "Namaste")
+
+  // Optional parameter with no default becomes "nothing" if omitted
+  task describe(name, note) start
+    show name
+    show note
+  end
+  describe("widget")
+
+  // Anonymous tasks as values
+  let square = task(x) start
+    return x * x
+  end
+  show square(5)
+
+  // Closures: a task returned by another task remembers its defining scope
+  task makeCounter() start
+    let count = 0
+    return task() start
+      let count = count + 1
+      return count
+    end
+  end
+
+  let counter = makeCounter()
+  show counter()
+  show counter()
+  show counter()
+
+  let counter2 = makeCounter()
+  show counter2()   // independent from counter
+
+  // Passing an anonymous task straight into sort()
+  let people = [{ name: "Zed", age: 30 }, { name: "Amy", age: 25 }]
+  sort(people, task(a, b) start
+    return a.age - b.age
+  end)
+  show people[0].name
+  show people[1].name
+end

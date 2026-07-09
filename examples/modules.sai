@@ -1,0 +1,12 @@
+// modules.sai — demonstrates import/export across files
+module Modules
+start
+  import { square, circleArea, PI } from "./module_demo/mathutils"
+  show PI
+  show square(4)
+  show circleArea(2)
+
+  import "./module_demo/mathutils" as math
+  show math.square(5)
+  show math.circleArea(3)
+end

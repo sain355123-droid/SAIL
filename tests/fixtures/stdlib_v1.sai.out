@@ -1,0 +1,24 @@
+9
+[3, 1, 4, 1, 5, 9, 2, 6, 100]
+100
+[3, 1, 4, 1, 5, 9, 2, 6]
+[3, 999, 1, 4, 1, 5, 9, 2, 6]
+999
+[3, 1, 4, 1, 5, 9, 2, 6]
+[1, 1, 2, 3, 4, 5, 6, 9]
+[9, 6, 5, 4, 3, 2, 1, 1]
+a-b-c
+true
+["name", "role"]
+["Sai", "Founder"]
+true
+["a", "b", "c"]
+padded text
+SHOUT
+quiet
+bonono
+hello
+world
+true
+true
+printed via print()

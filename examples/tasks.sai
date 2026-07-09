@@ -1,0 +1,32 @@
+// tasks.sai — demonstrates task (function) definitions, return, and calls
+module Tasks
+start
+  task greet(name) start
+    show "Hello, " + name + "!"
+  end
+
+  greet("Sainath")
+
+  task add(a, b) start
+    return a + b
+  end
+
+  let sum = add(3, 4)
+  show sum
+
+  // Tasks can call other tasks, and recursion works too
+  task factorial(n) start
+    if n <= 1 start
+      return 1
+    end
+    return n * factorial(n - 1)
+  end
+
+  show factorial(5)
+
+  // A task with no explicit return gives back "nothing"
+  task doNothing() start
+    show "doing nothing"
+  end
+  show doNothing()
+end
